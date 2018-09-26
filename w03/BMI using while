@@ -12,7 +12,7 @@ int main(){
 	scanf("%f",&high);
 	
 	
-	while(BMI>=0){
+	while(BMI>=0,weight>0){
 		high=pow(high,2);
 		BMI=weight/high;
 
