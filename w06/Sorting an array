@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(){
+	
+	int d[10]={2,10,55,68,12,57,92,76,6,87};
+	int n=10;
+	int temp;
+	
+	printf("Oringinal: ");
+	for(int i=0;i<n;i++){
+		printf("%3d ",d[i]);
+	}
+	printf("\n");
+	
+	for(int i=0;i<n;i++){
+		for(int j=0;j<n-i-1;j++){
+			if(d[j]>d[j+1]){
+				temp = d[j];
+				d[j]=d[j+1];
+				d[j+1]=temp;
+			}
+		}
+	}
+	printf("Sorting  : ");
+	for(int i=0;i<n;i++){
+		printf("%3d ",d[i]);
+	}
+}
